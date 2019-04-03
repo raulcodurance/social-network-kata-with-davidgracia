@@ -1,3 +1,6 @@
+package classicist;
+
+import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -38,7 +41,7 @@ public class PostingSocialNetworkShould {
         timeLine.post(message2);
         timeLine.post(message3);
 
-        assertThat(timeLine.messages()).containsExactlyInAnyOrder(new Message(HELLO_WORLD, currentTime)
+        Assertions.assertThat(timeLine.messages()).containsExactlyInAnyOrder(new Message(HELLO_WORLD, currentTime)
                 , new Message(HELLO_DAVID, currentTime2)
                 , new Message(HELLO_JORGE, currentTime3));
     }
