@@ -11,13 +11,12 @@ import static org.mockito.Mockito.verify;
 @RunWith(MockitoJUnitRunner.class)
 public class TimeLineShould {
 
-
     private TimeLine timeLine;
     @Mock Messages messages;
 
     @Before
     public void setUp() {
-        this.timeLine = new TimeLine();
+        this.timeLine = new TimeLine(messages);
     }
 
     @Test
